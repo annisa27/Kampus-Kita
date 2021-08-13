@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/kkInfo.css">
+    <title>Kampuskita</title>
+    <link rel="icon" type="image/png" href="assets/img home/kkIcon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+  </head>
+ 
+
+<body background="assets/img info/INFO.svg">
+<!--PRE LOADER-->
+<div class="loader">
+  <img  src="assets/img home/animation_500_koa457kb.gif"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" alt="">
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/img home/LogoKKnew.svg" alt="navbar-logo">
+  </div>
+  
+  <div class="navbar-list">
+        <ul>
+          <li>
+            <div class="dropdown">
+              <a class="dropbtn">Bantuan</a>
+              <div class="dropdown-content">
+                <a href="kkKontak.html">Kontak</a>
+                <a href="kkFAQ.html">FAQ</a>
+              </div>
+          </li>
+          <li>
+            <a class="navbarbtn"href="kkKarir.html">
+                   Karir
+            </a>
+          </li>
+          <li>
+            <a class="navbarbtn"href="kkBeasiswa.html">
+                   Beasiswa
+            </a>
+          </li>
+          <li>
+            <a class="navbarbtn"href="kkInfo.html">
+                   Info
+            </a>
+          </li>
+          <li>
+            <a class="navbarbtn"href="kkLihat.html">
+                 Lihat Kampus
+            </a>
+          </li>
+          <li>
+            <a class="navbarbtn" href="kkHome.html">
+                  Beranda
+            </a>
+          </li>
+        </ul>
+  </div>
+</div>
+
+<!-- MAIN -->
+
+  <!-- INFO -->
+    <div class="info">
+      <h1>HOT NEWS</h1>
+      <p>Berita terbaru seputar pendaftaran masuk universitas</p>
+    </div>
+
+    <iframe width="427" height="300"
+          src="https://www.youtube.com/embed/pZ8fkBdt1-4?controls=0">
+    </iframe>
+
+  <!-- ARTIKEL -->
+  <div class="artikel">
+    <h1>ARTIKEL TERKINI</h1>
+    <p>Info menarik buat kamu</p>
+
+    <center>
+      <table cellpadding="10px">
+        <tr>
+          <td><img id="myImg" src="assets/img info/Merdeka Belajar.svg" alt="" onmouseover="ImgL1(this)" onmouseout="ImgL2(this)"></td>
+          <td><img src="assets/img info/Info UTBK.png" alt="" onmouseover="ImgM1(this)" onmouseout="ImgM2(this)"></td>
+          <td><img src="assets/img info/Pramuka.png" alt="" onmouseover="ImgR1(this)" onmouseout="ImgR2(this)"></td>
+        </tr>
+        <tr>
+          <td>Kemendikbud Andalkan <br> Merdeka Belajar</td>
+          <td>Informasi tata cara <br> pendaftaran UTBK 2021</td>
+          <td>Berprestasi di Pramuka, Calon <br> Mahasiswa Bisa Masuk IPB</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.myedu.id/2021/02/menuju-bonus-demografi-kemendikbud.html" target="blank"><button>Baca</button></a></td>
+          <td><a href="https://portal.ltmpt.ac.id/" target="blank"><button>Baca</button></a></td>
+          <td><a href="https://www.kompas.com/edu/read/2021/02/18/094656471/berprestasi-di-pramuka-calon-mahasiswa-bisa-masuk-ipb-lewat-jalur-pin" target="blank"><button>Baca</button></a></td>
+        </tr>
+      </table>
+    </center>
+    
+  </div> 
+
+  <!-- CARI -->
+  <div class="cari">
+    <h2>Belum mendapatkan apa yang kamu cari?</h2>
+    <img src="assets/img info/cari.svg" alt="">
+    <a href="kkKontak.html""><button class="btn">Hubungi Kami</button></a>
+  </div>
+  
+
+<!--FOOTER-->
+<div class="footer">
+  <h3>Copyright ©2020 Kampuskita. All Rights Reserved  </h3>
+  <p>Tanggal,Jam saat ini: <span id="tanggalwaktu"></span></p>
+</div>
+
+<script>
+
+  //GANTI ATRIBUT IMG
+
+  //FUNGSI UNTUK GAMBAR KIRI KETIKA MOUSEOVER
+  function ImgL1(x) {
+    x.src = "assets/img info/nadiem.png";
+    x.style.height = "274px";
+    x.style.width = "287px";
+  }
+  //FUNGSI UNTUK GAMBAR KIRI KETIKA MOUSEOUT
+  function ImgL2(x) {
+    x.src = "assets/img info/Merdeka Belajar.svg";
+  }
+
+  //FUNGSI UNTUK GAMBAR TENGAH KETIKA MOUSEOVER
+  function ImgM1(x) {
+    x.src = "assets/img info/utbk ugm.png";
+    x.style.height = "274px";
+    x.style.width = "287px";
+  }
+  //FUNGSI UNTUK GAMBAR TENGAH KETIKA MOUSEOUT
+  function ImgM2(x) {
+    x.src = "assets/img info/Info UTBK.png";
+  }
+
+  //FUNGSI UNTUK GAMBAR KANAN KETIKA MOUSEOVER
+  function ImgR1(x) {
+    x.src = "assets/img info/anggota pramuka.png";
+    x.style.height = "274px";
+    x.style.width = "287px";
+  }
+  //FUNGSI UNTUK GAMBAR KANAN KETIKA MOUSEOUT
+  function ImgR2(x) {
+    x.src = "assets/img info/Pramuka.png";
+  }
+
+//JAM
+function fungsiJam()
+{
+    var str = "";
+
+    var days = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+    var months = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+
+    var now = new Date();
+
+    str += days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + ('0' + now.getHours()).slice(-2) +":" + ('0' + now.getMinutes()).slice(-2) + ":" + ('0' + now.getSeconds()).slice(-2);
+    document.getElementById("tanggalwaktu").innerHTML = str;
+  }
+
+setInterval(fungsiJam, 1000);
+  
+  //PRELOADER
+  var loader = document.querySelector(".loader")
+  
+  window.addEventListener("load", vanish);
+  
+  function vanish() {
+    loader.classList.add("disappear");
+  }
+  </script>
+
+</body> 
+
+</html>
